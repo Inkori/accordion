@@ -1,0 +1,155 @@
+.accordion {
+    width: 830px;
+    overflow: hidden;
+    color: #474747;
+    background: #414141;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.accordion section:target {
+    background: #FFF;
+    padding: 10px;
+}
+
+.accordion section:target:hover {
+    background: #FFF;
+}
+
+.accordion section:target h2 {
+    width: 100%;
+}
+
+.accordion section:target h2 a {
+    color: #333;
+    padding: 0;
+}
+
+.accordion section:target p {
+    display: block;
+}
+
+.accordion section h2 a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #eee;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+.accordion section {
+    float: left;
+    overflow: hidden;
+    color: #333;
+    cursor: pointer;
+    background: #333;
+    margin: 3px;
+}
+
+.accordion section:hover {
+    background: #444;
+}
+
+.accordion section p {
+    display: none;
+}
+
+.accordion section:after {
+    position: relative;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+.accordion section:nth-child(1):after {
+    content: '1';
+}
+
+.accordion section:nth-child(2):after {
+    content: '2';
+}
+
+.accordion section:nth-child(3):after {
+    content: '3';
+}
+
+.accordion section:nth-child(4):after {
+    content: '4';
+}
+
+.accordion section:nth-child(5):after {
+    content: '5';
+}
+
+.horizontal section {
+    width: 5%;
+    height: 250px;
+    -moz-transition: width .2s ease-out;
+    -webkit-transition: width .2s ease-out;
+    -o-transition: width .2s ease-out;
+    -ms-transition: width .2s ease-out;
+    transition: width .2s ease-out;
+}
+
+.horizontal section:after {
+    top: 140px;
+    left: 15px;
+}
+
+.horizontal section h2 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 240px;
+    position: relative;
+    left: -100px;
+    top: 85px;
+}
+
+.horizontal :target {
+    width: 73%;
+    height: 230px;
+}
+
+.horizontal :target h2 {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.vertical section {
+    width: 100%;
+    height: 40px;
+    -webkit-transition: height .2s ease-out;
+    -moz-transition: height .2s ease-out;
+    -o-transition: height .2s ease-out;
+    -ms-transition: height .2s ease-out;
+    transition: height .2s ease-out;
+}
+
+.vertical :target {
+    height: 250px;
+    width: 97%;
+}
+
+.vertical section h2 {
+    position: relative;
+    left: 0;
+    top: -15px;
+}
+
+.vertical section:after {
+    top: -60px;
+    left: 810px;
+}
+
+.vertical section:target:after {
+    left: -9999px;
+}
